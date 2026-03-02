@@ -12,13 +12,13 @@ public class Storage {
 
     private void writeToFile(String content){
 
-        try(FileWriter file = new FileWriter("")){
+        try(FileWriter file = new FileWriter("adat.txt")){
 
-            
+            file.write(content);
         }
         catch(IOException e){
-
-
+            System.err.println("Hiba történt a fájlírásban! ");
+            e.getMessage();
         }
     }
 }
