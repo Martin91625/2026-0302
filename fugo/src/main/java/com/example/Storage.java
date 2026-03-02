@@ -5,12 +5,7 @@ import java.io.IOException;
 
 public class Storage {
     
-    Storage(String content){
-
-        writeToFile(content);
-    }
-
-    private void writeToFile(String content){
+    public void writeToFile(String content){
 
         try(FileWriter file = new FileWriter("adat.txt")){
 

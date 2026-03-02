@@ -17,10 +17,12 @@ import java.util.Scanner;
 public class Sol {
     
     private List<String> targetList = new ArrayList<>();
+    private Storage storage = new Storage();
 
     Sol(){
         task01();
         printTargets();
+        startWrite();
     }
 
     private void task01(){
@@ -38,5 +40,13 @@ public class Sol {
         for (String string : targetList) {
             System.out.println(string);
         }
+    }
+    private void startWrite(){
+        StringBuilder sb = new StringBuilder();
+        for (String target : targetList) {
+            sb.append(target);
+            sb.append("\n");
+        }
+        storage.writeToFile(sb.toString());
     }
 }
